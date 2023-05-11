@@ -7,8 +7,8 @@
 
 ### [ETL Report](https://docs.google.com/document/d/1wLTfLtaF73sNXPi72_MRLooo1Bg13ZsnOUQh6zyGk7o/edit?usp=sharing)
 
-### [TrelloBoard](./Project_Specifications/TrelloBoard.png)
-![TrelloBoard](./Project_Specifications/TrelloBoard.png)
+### [TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
+![TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
 
 ### Executive Summary
 
