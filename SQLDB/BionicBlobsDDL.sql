@@ -6,6 +6,7 @@ drop table if exists Hotels_BB;
 drop table if exists Attractions_BB;
 
 drop table if exists Hosts_BB;
+drop table if exists Amenities_BB;
 drop table if exists Calendars_BB;
 drop table if exists Reviews_BB;
 drop table if exists Listings_BB;
@@ -41,6 +42,7 @@ Create Table NYCBoroughs_BB
 
 Create Table Locations_BB
 (
+    --ID DECIMAL(38,0) primary key IDENTITY(1,1),
     ID bigint primary key IDENTITY(1,1),
     Latitude float not null,
     Longitude float not null,
@@ -58,6 +60,7 @@ Create table Attractions_BB
     ID int primary key identity(1,1),
     Attraction_name varchar(100) not null,
     Website varchar(100) null,
+    --Location_ID DECIMAL(38,0) not null,
     Location_ID bigint not null,
 
     CONSTRAINT CK_Attraction_name UNIQUE(Attraction_name),
@@ -73,8 +76,9 @@ Create table Hotels_BB
     Hotel_high_rate float not null,
     Hotel_low_rate float not null,
     Location_ID bigint not null,
+   -- Location_ID DECIMAL(38,0) not null,
 
-    CONSTRAINT CK_Hotel_name UNIQUE(Hotel_name),
+    CONSTRAINT CK_Hotel_name_Location UNIQUE(Hotel_name,Location_ID),
     CONSTRAINT FK_Locations_Hotels_Location_ID FOREIGN KEY (Location_ID)
     REFERENCES Locations_BB(ID)
 )
@@ -111,7 +115,8 @@ Create Table NYC_Crimes_BB
     Complain_Number bigint not null,
     Date_Occured date not null,
     Crime_Type_ID int not null,
-    Location_ID bigint not null,
+   -- Location_ID DECIMAL(38,0) not null,
+   Location_ID bigint not null,
 
 
     CONSTRAINT FK_Crime_Type_NYC_Crimes_CrimeTypeID FOREIGN KEY (Crime_Type_ID)
@@ -126,11 +131,13 @@ Create Table NYC_Crimes_BB
 
 Create table Listings_BB
 (
+    -- Listing_ID DECIMAL(38,0) primary key,
     Listing_ID bigint primary key,
     Host_ID bigint not null,
-    Listing_Name varchar(1000) not null,
-    About varchar(1000) null,
-    Price float not null,
+    Listing_Name varchar(1000) null,
+    About varchar(8000) null,
+    Price_Str varchar(8000) not null,
+    Price float null,
     [Type] varchar(1000) null,
     Number_of_People int null,
     Min_n int null,
@@ -143,27 +150,41 @@ Create table Listings_BB
 )
 
 Create table Reviews_BB
-(   ID int primary key identity(1,1),
-    Listing_ID bigint not null,
-    Date date null,
-    ReviewerID bigint null,
-    comment varchar(1000) null,
+(   ID bigint primary key,
+Listing_ID bigint,
+    --Listing_ID DECIMAL(38,0) ,
+    [Date] date null,
+    ReviewerID int null,
+    Comment varchar(8000) null,
     CONSTRAINT FK_Listings_Reviews_ListingID FOREIGN KEY (Listing_ID)
     REFERENCES Listings_BB(Listing_ID)
 )
 
 Create table Calendars_BB
-(   ID int primary key identity(1,1),
-    Listing_ID bigint not null,
+(  
+    --Listing_ID DECIMAL(38,0) primary key,
+    Listing_ID bigint primary key,
     Count int not null,
     CONSTRAINT FK_Listings_Calendar_ListingID FOREIGN KEY (Listing_ID)
     REFERENCES Listings_BB(Listing_ID)
 )
 
-Create table Hosts_BB
-(   ID int primary key identity(1,1),
-    Host_ID bigint not null,
-    Amentity_Name varchar(8000) null,
+-- Create table Amentities_BB
+-- (   ID int primary key identity(1,1),
+--     Host_ID bigint not null,
+--     Amentity_Name varchar(8000) null,
 
+-- )
+
+Create table Hosts_BB
+(
+    ID int primary key identity(1,1),
+    Host_ID bigint not null,
+    [Host_is_superhost] varchar(10) null,
+    [Host_listings_count] int null,
+    [Host_since] date null,
+    [Host_response_time] varchar(100) null,
+    [Host_response_rate] varchar(100) null,
+    [Host_acceptance_rate] varchar(100) null
 )
 
