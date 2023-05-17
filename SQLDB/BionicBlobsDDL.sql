@@ -150,8 +150,8 @@ Create table Listings_BB
 )
 
 Create table Reviews_BB
-(   ID bigint primary key,
-Listing_ID bigint,
+(   ID bigint,
+    Listing_ID bigint,
     --Listing_ID DECIMAL(38,0) ,
     [Date] date null,
     ReviewerID int null,

@@ -166,6 +166,7 @@ insert into Reviews_BB(ID,Listing_ID, [Date],ReviewerID,Comment)
     select id,listing_id,[date],reviewer_id,comments 
     from reviews
 )
+select * from reviews_BB
 
 insert into Calendars_BB(Listing_ID,Count)
 (
