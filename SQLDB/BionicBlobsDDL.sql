@@ -6,7 +6,6 @@ drop table if exists Hotels_BB;
 drop table if exists Attractions_BB;
 
 drop table if exists Hosts_BB;
-drop table if exists Amenities_BB;
 drop table if exists Calendars_BB;
 drop table if exists Reviews_BB;
 drop table if exists Listings_BB;
@@ -49,6 +48,7 @@ Create Table Locations_BB
     Borough_ID int null,
     Zipcode varchar(100) null,
     [Address] varchar(100) null,
+    Dataset varchar(100) not null,
 
     CONSTRAINT FK_NYCBoroughs_Locations_BoroughID FOREIGN KEY (Borough_ID)
     REFERENCES NYCBoroughs_BB(ID)
