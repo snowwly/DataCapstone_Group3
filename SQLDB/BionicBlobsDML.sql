@@ -169,9 +169,26 @@ select count(*) as nyccrimebb from NYC_Crimes_BB
 select * from NYC_Crimes_BB
 where Crime_Type_ID is null
 
+
+--hosts-------------------------------
+insert into Hosts_BB (Host_ID,Host_is_superhost,Host_listings_count,Host_since,
+Host_response_time,Host_response_rate,Host_acceptance_rate)
+(
+    select distinct host_id,host_is_superhost,host_listings_count,host_since,host_response_time,
+    host_response_rate,host_acceptance_rate
+    from host2
+)
+
+select count(*) as hostsbb from Hosts_BB
+select count(*) as hosts from host2
+
+select count(distinct HOST_ID) from Hosts_BB
+
+select * from hosts_BB
+order by host_id desc
 --Listings table--------------------------
 insert into Listings_BB(Listing_ID,Host_ID,Listing_Name,About,[Type],Number_of_People,Min_n,
-Max_n,Review_Date,Price_Str)
+Max_n,First_Review_Date,Price_Str)
 (
     select id,[fk_l_host_id],[name],[abt]
      ,[type]
@@ -190,15 +207,20 @@ select count(*) as listing from listings
 
 insert into Reviews_BB(ID,Listing_ID, [Date],ReviewerID,Comment)
 (
-    select id,listing_id,[date],reviewer_id,comments 
+    select distinct id,listing_id,[date],reviewer_id,comments 
     from reviews
 )
 select count(*) as reviewsbb from reviews_BB
 select count(*) as reviews from reviews
+-- select count(distinct id) from reviews_BB
+
+-- select * from Reviews_BB
+-- where id in (select id from reviews_bb group by id having count(*) >1)
+-- order by id desc
 
 insert into Calendars_BB(Listing_ID,Count)
 (
-    select fk_c_listing_id,count 
+    select distinct fk_c_listing_id,count 
     from calendar
 )
 
@@ -206,16 +228,7 @@ select count(*) as calendarsbb from Calendars_BB
 
 select count(*) as calendars from calendar
 
-insert into Hosts_BB (Host_ID,Host_is_superhost,Host_listings_count,Host_since,
-Host_response_time,Host_response_rate,Host_acceptance_rate)
-(
-    select host_id,host_is_superhost,host_listings_count,host_since,host_response_time,
-    host_response_rate,host_acceptance_rate
-    from host2
-)
 
-select count(*) as hostsbb from Hosts_BB
-select count(*) as hosts from host2
 
 
 

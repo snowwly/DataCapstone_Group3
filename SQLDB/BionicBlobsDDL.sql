@@ -1,19 +1,20 @@
 use Bionic_blobs
 
 drop table if exists ZillowNYC_Housing_Counts_BB;
-drop table if exists NYC_Crimes_BB;
-drop table if exists Crime_Types_BB;
+-- drop table if exists NYC_Crimes_BB;
+-- drop table if exists Crime_Types_BB;
 drop table if exists Zillow_Rental_Homes_BB;
 drop table if exists Hotels_BB;
 drop table if exists Attractions_BB;
 
-drop table if exists Hosts_BB;
+
 drop table if exists Calendars_BB;
 drop table if exists Reviews_BB;
 drop table if exists Listings_BB;
+drop table if exists Hosts_BB;
 
-drop table if exists Locations_BB;
-drop table if exists NYCBoroughs_BB;
+-- drop table if exists Locations_BB;
+-- drop table if exists NYCBoroughs_BB;
 
 
 
@@ -131,6 +132,19 @@ Create Table NYC_Crimes_BB
 
 )
 
+Create table Hosts_BB
+(
+    -- ID int primary key identity(1,1),
+    Host_ID bigint primary key,
+    [Host_is_superhost] varchar(10) null,
+    [Host_listings_count] int null,
+    [Host_since] date null,
+    [Host_response_time] varchar(100) null,
+    [Host_response_rate] varchar(100) null,
+    [Host_acceptance_rate] varchar(100) null
+)
+
+
 --Airbnb listings------------------------------------------
 
 Create table Listings_BB
@@ -145,15 +159,18 @@ Create table Listings_BB
     Number_of_People int null,
     Min_n int null,
     Max_n int null,
-    Review_Date date null,
+    First_Review_Date date null,
 
     CONSTRAINT FK_Locations_Listings_ListingID FOREIGN KEY (Listing_ID)
-    REFERENCES Locations_BB(ID)
+    REFERENCES Locations_BB(ID),
+
+    CONSTRAINT FK_Hosts_Listings_HostID FOREIGN KEY (Host_ID)
+    REFERENCES Hosts_BB(Host_ID)
 
 )
 
 Create table Reviews_BB
-(   ID bigint,
+(   ID bigint primary key,
     Listing_ID bigint,
     --Listing_ID DECIMAL(38,0) ,
     [Date] date null,
@@ -172,17 +189,15 @@ Create table Calendars_BB
     REFERENCES Listings_BB(Listing_ID)
 )
 
+-- select count(*) from Calendars_BB
+-- select distinct listing_id from calendars_bb
 
+-- select * from calendars_BB
+-- where listing_id in (select listing_id from calendars_bb group by listing_id having count(*) >1)
+-- order by listing_id desc
 
-Create table Hosts_BB
-(
-    ID int primary key identity(1,1),
-    Host_ID bigint not null,
-    [Host_is_superhost] varchar(10) null,
-    [Host_listings_count] int null,
-    [Host_since] date null,
-    [Host_response_time] varchar(100) null,
-    [Host_response_rate] varchar(100) null,
-    [Host_acceptance_rate] varchar(100) null
-)
+-- select * from Calendars_BB
+-- where listing_id is not null
 
+-- select distinct fk_c_listing_id,count 
+--     from calendar
