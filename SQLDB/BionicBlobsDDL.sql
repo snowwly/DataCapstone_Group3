@@ -1,3 +1,5 @@
+use Bionic_blobs
+
 drop table if exists ZillowNYC_Housing_Counts_BB;
 drop table if exists NYC_Crimes_BB;
 drop table if exists Crime_Types_BB;
@@ -12,6 +14,8 @@ drop table if exists Listings_BB;
 
 drop table if exists Locations_BB;
 drop table if exists NYCBoroughs_BB;
+
+
 
 
 
@@ -137,7 +141,6 @@ Create table Listings_BB
     Listing_Name varchar(1000) null,
     About varchar(8000) null,
     Price_Str varchar(8000) not null,
-    Price float null,
     [Type] varchar(1000) null,
     Number_of_People int null,
     Min_n int null,
@@ -169,12 +172,7 @@ Create table Calendars_BB
     REFERENCES Listings_BB(Listing_ID)
 )
 
--- Create table Amentities_BB
--- (   ID int primary key identity(1,1),
---     Host_ID bigint not null,
---     Amentity_Name varchar(8000) null,
 
--- )
 
 Create table Hosts_BB
 (

@@ -1,4 +1,6 @@
 
+USE Bionic_blobs
+
 select * from Hotels 
 where hotel_name = 'Flushing Ymca'
 
@@ -24,6 +26,8 @@ Insert into ZillowNYC_Housing_Counts_BB(NYC,[Date],[Year],[Month],Count)
 );
 
 select * from ZillowNYC_Housing_Counts_BB
+select count(*) as zillowhousebb from ZillowNYC_Housing_Counts_BB
+select count(*) as zillowhouse from Zillow_Home_Listings
 
 --NYCBoroughs_BB-------------------------------------------------
 Insert into NYCBoroughs_BB(Borough_name,County_name)
@@ -33,8 +37,9 @@ Insert into NYCBoroughs_BB(Borough_name,County_name)
 )
 
 select * from NYCBoroughs_BB
+select count(*) as boroughs from  NYCBoroughs_BB
 
---Locations_BB--------------------------------------
+--Locations_BB-------------------------------------------------------------------------------------------------------------------
 
 --the locations from listings--------------------------------------------
 SET IDENTITY_INSERT Locations_BB ON
@@ -85,7 +90,7 @@ insert into Locations_BB (Latitude,Longitude,Borough_ID,[Address],Zipcode,Datase
 )
 
 select * from Locations_BB where address is not null
-
+--END OF LOCATIONS --------------------------------------------------------------------------------------------------------------------
 --Attractions table-----------------------
 insert into Attractions_BB (Attraction_name,Website,Location_ID)
 (
@@ -98,6 +103,9 @@ insert into Attractions_BB (Attraction_name,Website,Location_ID)
 )
 
 select * from Attractions_BB
+select count(*) as attractionsbb from Attractions_BB
+select count(*) as attractions from AttractionsDistinct
+
 
 --Hotels table-------------------------
 
@@ -116,6 +124,8 @@ insert into Hotels_BB (Hotel_name,Hotel_star_rating,Hotel_high_rate,Hotel_low_ra
 )
 
 select * from Hotels_BB
+select count(*) as hotelsbb from Hotels_BB
+select count(*) as hotels from Hotels
 --Zillow Rental Homes BB -------------------------------------
 insert into Zillow_Rental_Homes_BB(NYC_Borough_ID,[Date],[Year],[Month],Avg_Rental_Home_Price)
 (
@@ -133,7 +143,9 @@ insert into Crime_Types_BB(Crime_Description,Level_Of_Offense)
     from NYCcrime
 )
 
-select * from Crime_Types_BB
+select count(*) from Crime_Types_BB
+select count(distinct concat([Crime Description], [Level Of Offense])) from NYCcrime
+
 
 insert into NYC_Crimes_BB(Complain_Number,Date_Occured,Crime_Type_ID,Location_ID)
 (
@@ -149,34 +161,13 @@ insert into NYC_Crimes_BB(Complain_Number,Date_Occured,Crime_Type_ID,Location_ID
     and NYCcrime.Borough = NYCBoroughs_BB.Borough_name)
 )
 
-select count(*) from NYCcrime
-select count(*) from NYC_Crimes_BB
-   select count(*)
-    from NYCcrime left join Crime_Types_BB
-    on (NYCcrime.[Level of Offense] = Crime_Types_BB.Level_Of_Offense
-    and NYCcrime.[Crime Description] = Crime_Types_BB.Crime_Description)
+select count(*) as nyccrime from NYCcrime
+select count(*) as nyccrimebb from NYC_Crimes_BB
 
- select count(*)
-    from NYCcrime 
- inner join Locations_BB
-    on (NYCcrime.Latitude = Locations_BB.Latitude
-    and NYCcrime.Longitude=Locations_BB.Longitude
-    and Locations_BB.Dataset = 'Crimes')
-    where Dataset = 'Crimes'
-
-    select count(*)
-    from Locations_BB
-    where Locations_BB.Dataset = 'Crimes'
-
-        select distinct latitude,longitude
-    from Locations_BB
-    where Locations_BB.Dataset = 'Crimes'
 
 
 select * from NYC_Crimes_BB
 where Crime_Type_ID is null
-
-select * from NYC_Crimes_BB
 
 --Listings table--------------------------
 insert into Listings_BB(Listing_ID,Host_ID,Listing_Name,About,[Type],Number_of_People,Min_n,
@@ -192,8 +183,9 @@ Max_n,Review_Date,Price_Str)
       from listings
 )
 
-select * from listings_BB
-
+select count(*)  as listingbb from listings_BB
+select count(*) as listing from listings
+-- select * from listings_BB
 --reviews----------------------------
 
 insert into Reviews_BB(ID,Listing_ID, [Date],ReviewerID,Comment)
@@ -201,7 +193,8 @@ insert into Reviews_BB(ID,Listing_ID, [Date],ReviewerID,Comment)
     select id,listing_id,[date],reviewer_id,comments 
     from reviews
 )
-select * from reviews_BB
+select count(*) as reviewsbb from reviews_BB
+select count(*) as reviews from reviews
 
 insert into Calendars_BB(Listing_ID,Count)
 (
@@ -209,7 +202,9 @@ insert into Calendars_BB(Listing_ID,Count)
     from calendar
 )
 
-select * from Calendars_BB
+select count(*) as calendarsbb from Calendars_BB
+
+select count(*) as calendars from calendar
 
 insert into Hosts_BB (Host_ID,Host_is_superhost,Host_listings_count,Host_since,
 Host_response_time,Host_response_rate,Host_acceptance_rate)
@@ -219,8 +214,9 @@ Host_response_time,Host_response_rate,Host_acceptance_rate)
     from host2
 )
 
-select * from Hosts_BB
+select count(*) as hostsbb from Hosts_BB
+select count(*) as hosts from host2
 
 
-select * from NYCcrime
+
 
