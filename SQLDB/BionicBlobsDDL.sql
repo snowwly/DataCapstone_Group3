@@ -1,17 +1,17 @@
 use Bionic_blobs
 
-drop table if exists ZillowNYC_Housing_Counts_BB;
+-- drop table if exists ZillowNYC_Housing_Counts_BB;
 -- drop table if exists NYC_Crimes_BB;
 -- drop table if exists Crime_Types_BB;
-drop table if exists Zillow_Rental_Homes_BB;
-drop table if exists Hotels_BB;
-drop table if exists Attractions_BB;
+-- drop table if exists Zillow_Rental_Homes_BB;
+-- drop table if exists Hotels_BB;
+-- drop table if exists Attractions_BB;
 
 
-drop table if exists Calendars_BB;
-drop table if exists Reviews_BB;
-drop table if exists Listings_BB;
-drop table if exists Hosts_BB;
+-- drop table if exists Calendars_BB;
+-- drop table if exists Reviews_BB;
+-- drop table if exists Listings_BB;
+-- drop table if exists Hosts_BB;
 
 -- drop table if exists Locations_BB;
 -- drop table if exists NYCBoroughs_BB;
@@ -160,6 +160,7 @@ Create table Listings_BB
     Min_n int null,
     Max_n int null,
     First_Review_Date date null,
+    Price float null,
 
     CONSTRAINT FK_Locations_Listings_ListingID FOREIGN KEY (Listing_ID)
     REFERENCES Locations_BB(ID),

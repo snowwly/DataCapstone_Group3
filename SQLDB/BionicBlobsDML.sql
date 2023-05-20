@@ -188,16 +188,11 @@ select * from hosts_BB
 order by host_id desc
 --Listings table--------------------------
 insert into Listings_BB(Listing_ID,Host_ID,Listing_Name,About,[Type],Number_of_People,Min_n,
-Max_n,First_Review_Date,Price_Str)
+Max_n,First_Review_Date,Price_Str,Price)
 (
-    select id,[fk_l_host_id],[name],[abt]
-     ,[type]
-      ,[#ppl]
-      ,[min_n]
-      ,[max_n]
-      ,[1_rvw]
-      ,[$]
-      from listings
+    select Listing_ID,Host_ID,Listing_Name,About,[Type],Number_of_People,Min_n,
+Max_n,First_Review_Date,Price_Str,Price
+      from listingschanged
 )
 
 select count(*)  as listingbb from listings_BB
@@ -205,18 +200,21 @@ select count(*) as listing from listings
 -- select * from listings_BB
 --reviews----------------------------
 
+-- delete from reviews 
+-- where id in (
+-- select id from Reviews
+-- where id in (select id from reviews group by id having count(*) >1)) 
+
 insert into Reviews_BB(ID,Listing_ID, [Date],ReviewerID,Comment)
 (
     select distinct id,listing_id,[date],reviewer_id,comments 
     from reviews
 )
 select count(*) as reviewsbb from reviews_BB
-select count(*) as reviews from reviews
--- select count(distinct id) from reviews_BB
+-- select count(*) as reviews from reviews
+-- select count(distinct id) from reviews
 
--- select * from Reviews_BB
--- where id in (select id from reviews_bb group by id having count(*) >1)
--- order by id desc
+
 
 insert into Calendars_BB(Listing_ID,Count)
 (
