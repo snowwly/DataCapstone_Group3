@@ -7,6 +7,9 @@
 
 ### [ETL Report](https://docs.google.com/document/d/1wLTfLtaF73sNXPi72_MRLooo1Bg13ZsnOUQh6zyGk7o/edit?usp=sharing)
 
+### [Technical Report Link Google Doc](https://docs.google.com/document/d/1y7YFrRklCgvQ6yxS6yh_YgjZ78IkcmyB7-Mi1B-KjRk/edit)
+
+
 ### [TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
 ![TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
 
