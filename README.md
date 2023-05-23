@@ -9,6 +9,7 @@
 
 ### [Technical Report Link Google Doc](https://docs.google.com/document/d/1y7YFrRklCgvQ6yxS6yh_YgjZ78IkcmyB7-Mi1B-KjRk/edit)
 
+### [PowerBI Link](https://app.powerbi.com/groups/9cd692c1-cde9-402d-8d1f-884c5c68117f/list)
 
 ### [TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
 ![TrelloBoard](./Project_Specifications/TrelloBoardGroup3.png)
