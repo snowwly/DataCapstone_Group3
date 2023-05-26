@@ -67,7 +67,9 @@ We hope that with our information, NYC officials can make more informed decision
 
 ## [Dashboard & Visualizations](#table-of-contents)
 
-[Dashboard PDF Files](./Project_Specifications/Dashboard.pdf)
+[Dashboard PDF File](./Project_Specifications/Dashboard.pdf)
+
+[Powerpoint Slides PDF](./Project_Specifications/PowerPointPresentationSlides.pdf)
 
 [PowerBI Dashboard Link](https://app.powerbi.com/groups/9cd692c1-cde9-402d-8d1f-884c5c68117f/list)
 
