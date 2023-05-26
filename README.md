@@ -71,6 +71,19 @@ We hope that with our information, NYC officials can make more informed decision
 
 Example Images
 
+![NYC Airbnb Overview by Years](./images/airbnboverview.png)
+
+![NYC Airbnb Bookings vs NYC Airplane fare](./images/airbnb_bookings_airplanefare.png)
+
+![NYC Airbnb bookings each year](./images/airbnb_bookings_eachyear.png)
+
+![NYC Airbnb bookings vs NYC population](./images/airbnb_bookings_population_density.png)
+
+![NYC Airbnb prices vs NYC hotel prices](./images/airbnb_hotels_prices.png)
+
+![NYC Airbnb vs Zillow Rental Homes (prices) ](./images/airbnb_zillow_price.png)
+
+![NYC Airbnbs, Hotels, Attractions on a Map - Manhattan](./images/timemap_manhattan.png)
 
 ## [Results](#table-of-contents)
 [Technical Project Report]
