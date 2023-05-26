@@ -7,8 +7,9 @@
 - [Questions](#questions)
 - [Requirements](#requirements)
 - [Data Processing & ETL](#data-processing--etl)
+- [Code for ETL process](#code-for-etl-process)
 - [Machine Learning](#code-for-machine-learning)
-- [Visualizations](#visualizations)
+- [Dashboard & Visualizations](#visualizations)
 - [Results](#results)
 - [Sources](#sources)
 
@@ -31,6 +32,7 @@ We hope that with our information, NYC officials can make more informed decision
 10. Does the amount of crime in each borough have any impact on the amount of airbnb bookings? How about tourist attractions? 
 11. Does Airplane fare prices affect AirBnB bookings and when is that?
 
+>Answers to our questions and visualizations for our data analysis can be found in our "Results" section from the table of contents in our Technical Project Report
 
 ## [Requirements](#table-of-contents)
 - pandas
@@ -48,8 +50,7 @@ We hope that with our information, NYC officials can make more informed decision
 
 [ETL Report](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ETLReport.pdf)
 
-### Code for ETL process:
-<br>
+## [Code for ETL process](#table-of-contents)
 
 [Exploratory Data Analysis Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/EDA)
 
@@ -62,7 +63,7 @@ We hope that with our information, NYC officials can make more informed decision
 [Machine Learning Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/Machine_Learning)
 
 
-## [Visualizations](#table-of-contents)
+## [Dashboard & Visualizations](#table-of-contents)
 
 [Dashboard PDF Files](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Dashboard.pdf)
 
