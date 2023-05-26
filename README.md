@@ -64,7 +64,7 @@ We hope that with our information, NYC officials can make more informed decision
 [Machine Learning Code](./Machine_Learning/)
 
 ## [Results](#table-of-contents)
-[Technical Project Report](./Project_Specifications/Project_Report.pdf)
+[Technical Project Report](./Project_Specifications/Project_Report_.pdf)
 
 ## [Dashboard & Visualizations](#table-of-contents)
 
