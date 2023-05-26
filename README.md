@@ -7,6 +7,7 @@
 - [Questions](#questions)
 - [Requirements](#requirements)
 - [Data Processing & ETL](#data-processing--etl)
+- [Machine Learning](#code-for-machine-learning)
 - [Visualizations](#visualizations)
 - [Results](#results)
 - [Sources](#sources)
@@ -47,6 +48,20 @@ We hope that with our information, NYC officials can make more informed decision
 
 [ETL Report](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ETLReport.pdf)
 
+### Code for ETL process:
+<br>
+
+[Exploratory Data Analysis Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/EDA)
+
+[Python Code for Cleaning Data](https://github.com/snowwly/DataCapstone_Group3/tree/main/Code)
+
+[Code for DDL and DML for loading into SQL Database](https://github.com/snowwly/DataCapstone_Group3/tree/main/SQLDB)
+
+## [Code for Machine Learning](#table-of-contents)
+
+[Machine Learning Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/Machine_Learning)
+
+
 ## [Visualizations](#table-of-contents)
 
 [Dashboard PDF Files](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Dashboard.pdf)
@@ -64,10 +79,6 @@ Example Images
 
 
 
-
-### [Technical Report Link Google Doc](https://docs.google.com/document/d/1y7YFrRklCgvQ6yxS6yh_YgjZ78IkcmyB7-Mi1B-KjRk/edit)
-
-### [PowerBI Link](https://app.powerbi.com/groups/9cd692c1-cde9-402d-8d1f-884c5c68117f/list)
 
 
 
