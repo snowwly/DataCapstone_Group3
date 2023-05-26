@@ -44,19 +44,19 @@ We hope that with our information, NYC officials can make more informed decision
 
 ## [Data Processing & ETL](#table-of-contents)
 
-[Data Pipeline](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/DataPlatform.pdf)
+[Data Pipeline](./Project_Specifications/DataPlatform.pdf)
 
-[ERD Diagram](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ERD.pdf)
+[ERD Diagram](./Project_Specifications/ERD.pdf)
 
-[ETL Report](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ETLReport.pdf)
+[ETL Report](./Project_Specifications/ETLReport.pdf)
 
 ## [Code for ETL process](#table-of-contents)
 
-[Exploratory Data Analysis Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/EDA)
+[Exploratory Data Analysis Code](./EDA/)
 
-[Python Code for Cleaning Data](https://github.com/snowwly/DataCapstone_Group3/tree/main/Code)
+[Python Code for Cleaning Data](./Code/)
 
-[Code for DDL and DML for loading into SQL Database](https://github.com/snowwly/DataCapstone_Group3/tree/main/SQLDB)
+[Code for DDL and DML for loading into SQL Database](./SQLDB/)
 
 ## [Code for Machine Learning](#table-of-contents)
 
