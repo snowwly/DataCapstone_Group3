@@ -11,13 +11,13 @@
 - [Results](#results)
 - [Sources](#sources)
 
-## Introduction
+## [Introduction](#table-of-contents)
 
 New York City Airbnbs has been a topic that has been trending since they passed the short-term rental law in 2022 in order to possibly help the NYC neighborhood have more stable neighborhood communities and mitigate changes in the housing market. However, we attempt to look at an indepth analysis on how Airbnb hosts, listings, bookings, and prices tend to trend within NYC and also take in outside data sources to see how external factors might also be affecting Airbnb in NYC. These factors include looks into crime, seasonality, hotel competition, rental home, airplane fares, etc in order to analyze how airbnbs popularity and prices trend with these outside factors. 
 
 We hope that with our information, NYC officials can make more informed decisions on their outlook towards Airbnbs in NYC that would create actionable policies and laws that would benefit everyone. Our data will attempt to answer the following questions about NYC Airbnbs:
 
-## Questions
+## [Questions](#table-of-contents)
 1. What are the most expensive and least expensive areas for Airbnbs in New York City? 
 2. When is the most popular time of the year to book airbnb in New York? (seasonal, bring in holidays)
 3. What are the allowed average stay lengths?
@@ -31,7 +31,7 @@ We hope that with our information, NYC officials can make more informed decision
 11. Does Airplane fare prices affect AirBnB bookings and when is that?
 
 
-## Requirements
+## [Requirements](#table-of-contents)
 - pandas
 - numpy
 - pyspark
@@ -39,7 +39,7 @@ We hope that with our information, NYC officials can make more informed decision
 - pymssql
 - scikit-learn
 
-## Data Processing & ETL
+## [Data Processing & ETL](#table-of-contents)
 
 [Data Pipeline](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/DataPlatform.pdf)
 
@@ -47,7 +47,7 @@ We hope that with our information, NYC officials can make more informed decision
 
 [ETL Report](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ETLReport.pdf)
 
-## Visualizations
+## [Visualizations](#table-of-contents)
 
 [Dashboard PDF Files](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Dashboard.pdf)
 
@@ -56,10 +56,10 @@ We hope that with our information, NYC officials can make more informed decision
 Example Images
 
 
-## Results
+## [Results](#table-of-contents)
 [Technical Project Report]
 
-## Sources
+## [Sources](#table-of-contents)
 [Data Sources](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Data_Sources.pdf)
 
 
