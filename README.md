@@ -42,12 +42,15 @@ We hope that with our information, NYC officials can make more informed decision
 ## Data Processing & ETL
 
 [Data Pipeline](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/DataPlatform.pdf)
+
 [ERD Diagram](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ERD.pdf)
+
 [ETL Report](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/ETLReport.pdf)
 
 ## Visualizations
 
 [Dashboard PDF Files](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Dashboard.pdf)
+
 [PowerBI Dashboard Link](https://app.powerbi.com/groups/9cd692c1-cde9-402d-8d1f-884c5c68117f/list)
 
 Example Images
