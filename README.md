@@ -9,8 +9,8 @@
 - [Data Processing & ETL](#data-processing--etl)
 - [Code for ETL process](#code-for-etl-process)
 - [Machine Learning](#code-for-machine-learning)
-- [Dashboard & Visualizations](#visualizations)
 - [Results](#results)
+- [Dashboard & Visualizations](#visualizations)
 - [Sources](#sources)
 
 ## [Introduction](#table-of-contents)
@@ -62,6 +62,8 @@ We hope that with our information, NYC officials can make more informed decision
 
 [Machine Learning Code](./Machine_Learning/)
 
+## [Results](#table-of-contents)
+[Technical Project Report](./Project_Specifications/Project_Report.pdf)
 
 ## [Dashboard & Visualizations](#table-of-contents)
 
@@ -85,8 +87,6 @@ Example Images
 
 ![NYC Airbnbs, Hotels, Attractions on a Map - Manhattan](./images/timemap_manhattan.png)
 
-## [Results](#table-of-contents)
-[Technical Project Report](./Project_Specifications/Project_Report.pdf)
 
 ## [Sources](#table-of-contents)
 [Data Sources](./Project_Specifications/Data_Sources.pdf)
