@@ -60,12 +60,12 @@ We hope that with our information, NYC officials can make more informed decision
 
 ## [Code for Machine Learning](#table-of-contents)
 
-[Machine Learning Code](https://github.com/snowwly/DataCapstone_Group3/tree/main/Machine_Learning)
+[Machine Learning Code](./Machine_Learning/)
 
 
 ## [Dashboard & Visualizations](#table-of-contents)
 
-[Dashboard PDF Files](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Dashboard.pdf)
+[Dashboard PDF Files](./Project_Specifications/Dashboard.pdf)
 
 [PowerBI Dashboard Link](https://app.powerbi.com/groups/9cd692c1-cde9-402d-8d1f-884c5c68117f/list)
 
@@ -86,10 +86,10 @@ Example Images
 ![NYC Airbnbs, Hotels, Attractions on a Map - Manhattan](./images/timemap_manhattan.png)
 
 ## [Results](#table-of-contents)
-[Technical Project Report]
+[Technical Project Report](./Project_Specifications/Project_Report)
 
 ## [Sources](#table-of-contents)
-[Data Sources](https://github.com/snowwly/DataCapstone_Group3/blob/main/Project_Specifications/Data_Sources.pdf)
+[Data Sources](./Project_Specifications/Data_Sources.pdf)
 
 
 
