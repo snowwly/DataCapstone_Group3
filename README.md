@@ -86,7 +86,7 @@ Example Images
 ![NYC Airbnbs, Hotels, Attractions on a Map - Manhattan](./images/timemap_manhattan.png)
 
 ## [Results](#table-of-contents)
-[Technical Project Report](./Project_Specifications/Project_Report)
+[Technical Project Report](./Project_Specifications/Project_Report.pdf)
 
 ## [Sources](#table-of-contents)
 [Data Sources](./Project_Specifications/Data_Sources.pdf)
