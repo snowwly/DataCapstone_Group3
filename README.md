@@ -41,6 +41,7 @@ We hope that with our information, NYC officials can make more informed decision
 - matplotlib
 - pymssql
 - scikit-learn
+- plotly (graph objects and express)
 
 ## [Data Processing & ETL](#table-of-contents)
 
