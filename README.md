@@ -10,7 +10,7 @@
 - [Code for ETL process](#code-for-etl-process)
 - [Machine Learning](#code-for-machine-learning)
 - [Results](#results)
-- [Dashboard & Visualizations](#visualizations)
+- [Dashboard & Visualizations](#dashboard--visualizations)
 - [Sources](#sources)
 
 ## [Introduction](#table-of-contents)
